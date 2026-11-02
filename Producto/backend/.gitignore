@@ -1,0 +1,22 @@
+# Maven / Java
+target/
+*.class
+*.log
+HELP.md
+
+# Secretos y configuración local
+.env
+*.key
+*.pem
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache/
+.DS_Store

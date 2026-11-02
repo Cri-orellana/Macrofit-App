@@ -1,0 +1,582 @@
+[
+  {
+    "nombreEjercicio": "Flexiones de brazos",
+    "descripcion": "Con el cuerpo recto como una tabla, baja el pecho hasta casi tocar el suelo y empuja de vuelta sin arquear la espalda.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Flexiones+de+brazos+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Pecho",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Flexiones inclinadas",
+    "descripcion": "Apoya las manos en una superficie elevada para reducir la carga. Ideal para aprender el patrón de flexión.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Flexiones+inclinadas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Pecho",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Press de banca con barra",
+    "descripcion": "Acostado en el banco, baja la barra al pecho de forma controlada y empuja hasta extender los codos.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Press+de+banca+con+barra+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Barra",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Pecho",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Press de banca con mancuernas",
+    "descripcion": "Permite mayor rango de movimiento que la barra y trabaja cada lado de forma independiente.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Press+de+banca+con+mancuernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Pecho",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Aperturas con mancuernas",
+    "descripcion": "Abre los brazos con ligera flexión de codos hasta sentir estiramiento en el pecho y vuelve a juntar arriba.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Aperturas+con+mancuernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Pecho",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Cruce de poleas",
+    "descripcion": "De pie entre dos poleas altas, cruza los brazos al frente apretando el pecho al final del movimiento.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Cruce+de+poleas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Polea",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Pecho",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Dominadas",
+    "descripcion": "Cuélgate de la barra y sube hasta pasar el mentón, llevando los codos hacia las costillas.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Dominadas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Barra de dominadas",
+    "nivelDificultad": "Intenso",
+    "musculoObjetivo": "Dorsales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Remo con barra",
+    "descripcion": "Con el torso inclinado y la espalda neutra, lleva la barra hacia el abdomen juntando las escápulas.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Remo+con+barra+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Barra",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Espalda",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Remo con mancuerna a una mano",
+    "descripcion": "Apoya una mano y rodilla en el banco y tira de la mancuerna hacia la cadera sin rotar el tronco.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Remo+con+mancuerna+a+una+mano+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuerna",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Espalda",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Jalón al pecho",
+    "descripcion": "Sentado en la polea alta, baja la barra hasta la parte alta del pecho sacando el pecho y bajando los hombros.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Jal%C3%B3n+al+pecho+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Polea",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Dorsales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Remo en polea baja",
+    "descripcion": "Sentado con las piernas ligeramente flexionadas, tira del agarre hacia el abdomen manteniendo el torso estable.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Remo+en+polea+baja+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Polea",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Espalda",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Remo invertido en suspensión",
+    "descripcion": "Con el cuerpo inclinado bajo las cintas, tira del pecho hacia las manos. Cuanto más horizontal, más difícil.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Remo+invertido+en+suspensi%C3%B3n+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Suspensión",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Espalda",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Peso muerto convencional",
+    "descripcion": "Levanta la barra desde el suelo extendiendo cadera y rodillas a la vez, con la espalda neutra durante todo el recorrido.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Peso+muerto+convencional+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Barra",
+    "nivelDificultad": "Intenso",
+    "musculoObjetivo": "Erectores espinales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Superman",
+    "descripcion": "Boca abajo, eleva brazos y piernas a la vez y mantén un segundo arriba. Fortalece la zona lumbar.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Superman+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Erectores espinales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Press militar con barra",
+    "descripcion": "De pie, empuja la barra desde los hombros hasta arriba de la cabeza apretando abdomen y glúteos.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Press+militar+con+barra+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Barra",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Hombros",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Press de hombros con mancuernas",
+    "descripcion": "Sentado o de pie, empuja las mancuernas sobre la cabeza sin arquear la zona lumbar.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Press+de+hombros+con+mancuernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Hombros",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Elevaciones laterales",
+    "descripcion": "Eleva las mancuernas a los lados hasta la altura de los hombros con los codos ligeramente flexionados.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Elevaciones+laterales+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Hombros",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Pájaros con mancuernas",
+    "descripcion": "Inclinado hacia delante, abre los brazos a los lados para trabajar la parte posterior del hombro.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=P%C3%A1jaros+con+mancuernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Hombros",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Face pull con banda",
+    "descripcion": "Tira de la banda hacia la cara separando las manos. Ayuda a la postura y a la salud del hombro.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Face+pull+con+banda+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Banda elástica",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Hombros",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Encogimientos de hombros",
+    "descripcion": "Con una mancuerna en cada mano, sube los hombros hacia las orejas, pausa y baja lento.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Encogimientos+de+hombros+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Trapecios",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Curl de bíceps con mancuernas",
+    "descripcion": "Flexiona los codos llevando las mancuernas a los hombros sin balancear el cuerpo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Curl+de+b%C3%ADceps+con+mancuernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Bíceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Curl con barra EZ",
+    "descripcion": "El agarre angulado de la barra EZ reduce la tensión en las muñecas durante el curl.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Curl+con+barra+EZ+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Barra EZ",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Bíceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Curl martillo",
+    "descripcion": "Con las palmas enfrentadas, flexiona el codo como si sostuvieras un martillo. Trabaja también el antebrazo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Curl+martillo+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Bíceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Extensión de tríceps sobre la cabeza",
+    "descripcion": "Sujeta una mancuerna con ambas manos detrás de la cabeza y extiende los codos hacia arriba.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Extensi%C3%B3n+de+tr%C3%ADceps+sobre+la+cabeza+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuerna",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Tríceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Press francés con barra EZ",
+    "descripcion": "Acostado, baja la barra hacia la frente flexionando solo los codos y extiende de nuevo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Press+franc%C3%A9s+con+barra+EZ+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Barra EZ",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Tríceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Fondos en banco",
+    "descripcion": "Con las manos apoyadas en un banco o silla, baja y sube el cuerpo flexionando los codos hacia atrás.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Fondos+en+banco+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Banco",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Tríceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Extensión de tríceps en polea",
+    "descripcion": "Con los codos pegados al cuerpo, empuja el agarre hacia abajo hasta extender los brazos.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Extensi%C3%B3n+de+tr%C3%ADceps+en+polea+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Polea",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Tríceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Curl de muñeca",
+    "descripcion": "Con el antebrazo apoyado, flexiona la muñeca para subir la mancuerna. Mejora el agarre.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Curl+de+mu%C3%B1eca+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren superior",
+    "implemento": "Mancuerna",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Antebrazos",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Sentadilla libre",
+    "descripcion": "Con los pies al ancho de hombros, baja la cadera atrás y abajo manteniendo el pecho arriba y las rodillas alineadas.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Sentadilla+libre+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Sentadilla con barra",
+    "descripcion": "Con la barra sobre la espalda alta, baja hasta romper el paralelo y sube empujando el suelo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Sentadilla+con+barra+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Barra",
+    "nivelDificultad": "Intenso",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Sentadilla goblet",
+    "descripcion": "Sostén una kettlebell contra el pecho y sentadilla profunda. Facilita mantener el torso erguido.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Sentadilla+goblet+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Kettlebell",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Prensa de piernas",
+    "descripcion": "Empuja la plataforma con ambas piernas sin despegar la zona lumbar del respaldo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Prensa+de+piernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Máquina",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Zancadas caminando",
+    "descripcion": "Da un paso largo al frente y baja la rodilla trasera hacia el suelo; alterna las piernas avanzando.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Zancadas+caminando+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Sentadilla búlgara",
+    "descripcion": "Con el pie trasero elevado en un banco, baja en vertical sobre la pierna delantera.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Sentadilla+b%C3%BAlgara+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Peso muerto rumano",
+    "descripcion": "Con las rodillas ligeramente flexionadas, lleva la cadera atrás bajando la barra pegada a las piernas.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Peso+muerto+rumano+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Barra",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Isquiotibiales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Curl femoral en máquina",
+    "descripcion": "Flexiona las rodillas llevando los talones hacia los glúteos de forma controlada.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Curl+femoral+en+m%C3%A1quina+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Máquina",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Isquiotibiales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Peso muerto con barra hexagonal",
+    "descripcion": "Variante más amigable del peso muerto: la barra hexagonal permite mantener el torso más vertical.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Peso+muerto+con+barra+hexagonal+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Barra hexagonal",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Isquiotibiales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Puente de glúteos",
+    "descripcion": "Acostado boca arriba, sube la cadera apretando los glúteos arriba y baja sin apoyar del todo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Puente+de+gl%C3%BAteos+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Glúteos",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Hip thrust con barra",
+    "descripcion": "Con la espalda alta apoyada en un banco, empuja la cadera hacia arriba con la barra sobre la pelvis.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Hip+thrust+con+barra+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Barra",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Glúteos",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Patada de glúteo en polea",
+    "descripcion": "Con un tobillo enganchado a la polea, lleva la pierna hacia atrás sin arquear la espalda.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Patada+de+gl%C3%BAteo+en+polea+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Polea",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Glúteos",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Swing con kettlebell",
+    "descripcion": "Impulsa la kettlebell con la cadera, no con los brazos, hasta la altura del pecho.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Swing+con+kettlebell+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Kettlebell",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Glúteos",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Elevación de talones de pie",
+    "descripcion": "Sube sobre las puntas de los pies, pausa arriba y baja lentamente. Se puede hacer en un escalón.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Elevaci%C3%B3n+de+talones+de+pie+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Pantorrillas",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Abducción de cadera con minibanda",
+    "descripcion": "Con una minibanda sobre las rodillas, separa las piernas contra la resistencia.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Abducci%C3%B3n+de+cadera+con+minibanda+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Minibanda",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Abductores",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Aducción de cadera en máquina",
+    "descripcion": "Sentado en la máquina, junta las piernas contra la resistencia de forma controlada.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Aducci%C3%B3n+de+cadera+en+m%C3%A1quina+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Tren inferior",
+    "implemento": "Máquina",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Aductores",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Plancha frontal",
+    "descripcion": "Apoyado en antebrazos y puntas de los pies, mantén el cuerpo alineado apretando abdomen y glúteos.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Plancha+frontal+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Plancha lateral",
+    "descripcion": "Apoyado en un antebrazo, eleva la cadera y mantén el cuerpo en línea recta de lado.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Plancha+lateral+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Crunch abdominal",
+    "descripcion": "Acostado con las rodillas flexionadas, eleva los hombros del suelo contrayendo el abdomen.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Crunch+abdominal+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Bicicleta abdominal",
+    "descripcion": "Lleva alternadamente el codo hacia la rodilla contraria en un movimiento de pedaleo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Bicicleta+abdominal+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Elevación de piernas colgado",
+    "descripcion": "Colgado de la barra, eleva las piernas rectas o flexionadas sin balancearte.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Elevaci%C3%B3n+de+piernas+colgado+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Barra de dominadas",
+    "nivelDificultad": "Intenso",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Rueda abdominal",
+    "descripcion": "De rodillas, rueda hacia delante extendiendo el cuerpo y vuelve contrayendo el abdomen.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Rueda+abdominal+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Rueda abdominal",
+    "nivelDificultad": "Intenso",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Mountain climbers",
+    "descripcion": "En posición de plancha alta, lleva las rodillas alternadamente al pecho a buen ritmo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Mountain+climbers+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Ligero",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Elevación de rodillas",
+    "descripcion": "Acostado o de pie, sube las rodillas hacia el pecho de forma controlada.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Elevaci%C3%B3n+de+rodillas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Flexores de cadera",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Russian twist con balón medicinal",
+    "descripcion": "Sentado con el torso inclinado, rota el tronco de lado a lado llevando el balón junto a la cadera.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Russian+twist+con+bal%C3%B3n+medicinal+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Core",
+    "implemento": "Balón medicinal",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Burpees",
+    "descripcion": "Baja al suelo, haz una flexión, vuelve a pie y termina con un salto. Ejercicio metabólico completo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Burpees+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Thruster con mancuernas",
+    "descripcion": "Combina una sentadilla frontal con un press sobre la cabeza en un solo movimiento fluido.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Thruster+con+mancuernas+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Mancuernas",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Cuádriceps",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Ondas con cuerdas de batalla",
+    "descripcion": "Alterna ondas rápidas con ambos brazos manteniendo una media sentadilla estable.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Ondas+con+cuerdas+de+batalla+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Cuerdas de batalla",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Hombros",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Slam ball",
+    "descripcion": "Eleva el balón sobre la cabeza y lánzalo con fuerza contra el suelo usando todo el cuerpo.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Slam+ball+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Balón de golpeo",
+    "nivelDificultad": "Moderado",
+    "musculoObjetivo": "Abdominales",
+    "activoCatalogo": true
+  },
+  {
+    "nombreEjercicio": "Jumping jacks",
+    "descripcion": "Salta abriendo piernas y brazos a la vez y vuelve a la posición inicial. Buen calentamiento.",
+    "videoEjercicio": "https://www.youtube.com/results?search_query=Jumping+jacks+t%C3%A9cnica+ejercicio",
+    "zonaMuscular": "Cuerpo completo",
+    "implemento": "Peso corporal",
+    "nivelDificultad": "Sedentario",
+    "musculoObjetivo": "Pantorrillas",
+    "activoCatalogo": true
+  }
+]

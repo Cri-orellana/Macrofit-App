@@ -7,11 +7,15 @@ import com.proyecto.macrofit.usuarios.repository.RecetaCacheRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-import java.time.LocalDateTime;
 
+import java.text.Normalizer;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,10 +34,16 @@ public class SpoonacularService {
     @Value("${spoonacular.api.url}")
     private String urlBase;
 
+    @Value("${spoonacular.cache.ttl-hours:24}")
+    private long ttlHoras;
+
     private final RestTemplate restTemplate;
 
     public SpoonacularService() {
-        this.restTemplate = new RestTemplate();
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(5000);
+        factory.setReadTimeout(15000);
+        this.restTemplate = new RestTemplate(factory);
     }
 
     private String generarCacheKey(String tipoDieta, String ingredientes,
@@ -108,7 +118,7 @@ public class SpoonacularService {
 
             cacheRepo.save(receta);
             traducidas++;
-            System.out.println("✅ Traducida: " + nombreOriginal + " → " + receta.getNombre_comida());
+            System.out.println("Traducida: " + nombreOriginal + " → " + receta.getNombre_comida());
 
             try {
                 Thread.sleep(200);
@@ -119,6 +129,7 @@ public class SpoonacularService {
         return traducidas;
     }
 
+    @SuppressWarnings("unchecked")
     public List<ComidaRecomendada> buscarRecetasPersonalizadas(
             String tipoDieta,
             String ingredientes,
@@ -129,12 +140,22 @@ public class SpoonacularService {
         String cacheKey = generarCacheKey(tipoDieta, ingredientes,
                 maxCarbohidratos, minProteina, maxGrasa);
 
-        LocalDateTime limiteExpiracion = LocalDateTime.now().minusHours(24);
+        LocalDateTime limiteExpiracion = LocalDateTime.now().minusHours(ttlHoras);
 
         List<RecetaCache> enCache = cacheRepo.findByCacheKeyAndCreadoEnAfter(cacheKey, limiteExpiracion);
         if (!enCache.isEmpty()) {
-            System.out.println("✅ Cache HIT (vigente): " + cacheKey + " (" + enCache.size() + " recetas)");
+            System.out.println("Cache HIT (vigente): " + cacheKey + " (" + enCache.size() + " recetas)");
             return enCache.stream().map(this::cacheAComida).toList();
+        }
+
+        if (claveApi == null || claveApi.isBlank()) {
+            System.out.println("Sin API key de Spoonacular → usando recetas de respaldo");
+            return recetasDeRespaldo(tipoDieta, maxCarbohidratos, minProteina, maxGrasa);
+        }
+
+        if ("mock_key_temporal_123".equals(claveApi)) {
+            System.out.println("⚠️ Modo Sandbox activado: Interceptando llamada a Spoonacular y devolviendo mock.");
+            return generarListaMock(ingredientes);
         }
 
         System.out.println("🌐 Cache MISS o expirado: " + cacheKey + " → consultando Spoonacular");
@@ -175,6 +196,7 @@ public class SpoonacularService {
 
                     List<String> listaIng = new ArrayList<>();
                     if (recetaIngles.containsKey("extendedIngredients")) {
+                        // Corrección: Tipos genéricos explícitos restaurados
                         List<Map<String, Object>> extIng = (List<Map<String, Object>>) recetaIngles
                                 .get("extendedIngredients");
                         if (extIng != null) {
@@ -287,6 +309,81 @@ public class SpoonacularService {
             System.err.println("❌ Error: " + e.getMessage());
         }
 
+        if (listaRecomendaciones.isEmpty()) {
+            System.out.println("↩️ Spoonacular no devolvió recetas → usando recetas de respaldo");
+            return recetasDeRespaldo(tipoDieta, maxCarbohidratos, minProteina, maxGrasa);
+        }
+
         return listaRecomendaciones;
+    }
+
+    private List<ComidaRecomendada> generarListaMock(String ingredientes) {
+        List<ComidaRecomendada> mocks = new ArrayList<>();
+        ComidaRecomendada mock = new ComidaRecomendada();
+
+        String sufijo = (ingredientes != null && !ingredientes.isBlank()) ? " con " + ingredientes : " Saludable";
+
+        mock.setId_comida(999999);
+        mock.setNombre_comida("Receta Demo" + sufijo);
+        mock.setDescripcion_comida("Recomendación generada en modo Sandbox para portafolio (Sin consumo de API).");
+        mock.setCantidad_porcion("1 porción");
+        mock.setCalorias_porcion(450.0f);
+        mock.setProteina_porcion(35.0f);
+        mock.setCarbohidratos_porcion(45.0f);
+        mock.setGrasa_porcion(12.0f);
+        mock.setFoto_comida("https://via.placeholder.com/300x200.png?text=Demo+Spoonacular");
+        mock.setIngredientes_lista(List.of("Ingrediente de prueba 1", "Ingrediente de prueba 2"));
+        mock.setPreparacion_lista(
+                List.of("Mezclar los ingredientes.", "Cocinar según preferencia.", "Servir y disfrutar."));
+
+        mocks.add(mock);
+        return mocks;
+    }
+
+    private static String normalizar(String texto) {
+        if (texto == null)
+            return "";
+        return Normalizer.normalize(texto, Normalizer.Form.NFD)
+                .replaceAll("\\p{M}", "")
+                .toLowerCase()
+                .trim();
+    }
+
+    private boolean cumpleMacros(RecetaCache r, Float maxCarbs, Float minProt, Float maxGrasa) {
+        boolean carbs = maxCarbs == null || r.getCarbohidratos_porcion() == null
+                || r.getCarbohidratos_porcion() <= maxCarbs;
+        boolean prot = minProt == null || r.getProteina_porcion() == null
+                || r.getProteina_porcion() >= minProt;
+        boolean grasa = maxGrasa == null || r.getGrasa_porcion() == null
+                || r.getGrasa_porcion() <= maxGrasa;
+        return carbs && prot && grasa;
+    }
+
+    private List<ComidaRecomendada> recetasDeRespaldo(String tipoDieta, Float maxCarbs,
+            Float minProt, Float maxGrasa) {
+
+        String dieta = normalizar(tipoDieta);
+        List<RecetaCache> todas = cacheRepo.findAll();
+
+        List<RecetaCache> deLaDieta = todas.stream().filter(r -> {
+            if (dieta.isEmpty())
+                return true;
+            String clave = normalizar(r.getCacheKey());
+            return clave.startsWith(dieta + "|") || clave.startsWith("demo|" + dieta);
+        }).toList();
+        List<RecetaCache> base = deLaDieta.isEmpty() ? todas : deLaDieta;
+
+        List<RecetaCache> estrictas = base.stream()
+                .filter(r -> cumpleMacros(r, maxCarbs, minProt, maxGrasa)).toList();
+        List<RecetaCache> elegidas = estrictas.isEmpty() ? base : estrictas;
+
+        Map<Integer, RecetaCache> unicas = new LinkedHashMap<>();
+        for (RecetaCache r : elegidas) {
+            unicas.putIfAbsent(r.getSpoonacularId(), r);
+        }
+        List<RecetaCache> lista = new ArrayList<>(unicas.values());
+        Collections.shuffle(lista);
+
+        return lista.stream().limit(5).map(this::cacheAComida).toList();
     }
 }

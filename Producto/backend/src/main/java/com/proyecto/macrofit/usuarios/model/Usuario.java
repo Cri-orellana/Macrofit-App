@@ -1,10 +1,13 @@
 package com.proyecto.macrofit.usuarios.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Usuario {
     private Integer id_usuario;
     private Integer id_objetivo;
     private Integer id_nv_act;
     private String correo;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String contrasena;
     private String rol;
     private String nom_usuario;

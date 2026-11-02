@@ -1,0 +1,410 @@
+[
+  {
+    "nombreRutina": "Full Body Principiante",
+    "descripcion": "Rutina de 3 días para empezar: cuerpo completo con ejercicios simples y cargas moderadas.",
+    "cantidadDias": 3,
+    "ejercicios": [
+      {
+        "ejercicio": "Sentadilla goblet",
+        "dia": 1,
+        "orden": 1,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 8
+      },
+      {
+        "ejercicio": "Flexiones inclinadas",
+        "dia": 1,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 10,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Remo con mancuerna a una mano",
+        "dia": 1,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 8
+      },
+      {
+        "ejercicio": "Plancha frontal",
+        "dia": 1,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": null,
+        "tiempoSeg": 30,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Prensa de piernas",
+        "dia": 2,
+        "orden": 1,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 40
+      },
+      {
+        "ejercicio": "Press de hombros con mancuernas",
+        "dia": 2,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 10,
+        "tiempoSeg": null,
+        "pesoReferencia": 6
+      },
+      {
+        "ejercicio": "Jalón al pecho",
+        "dia": 2,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 30
+      },
+      {
+        "ejercicio": "Puente de glúteos",
+        "dia": 2,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Crunch abdominal",
+        "dia": 2,
+        "orden": 5,
+        "series": 3,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Zancadas caminando",
+        "dia": 3,
+        "orden": 1,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Flexiones de brazos",
+        "dia": 3,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 8,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Remo en polea baja",
+        "dia": 3,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 25
+      },
+      {
+        "ejercicio": "Curl martillo",
+        "dia": 3,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 6
+      },
+      {
+        "ejercicio": "Plancha lateral",
+        "dia": 3,
+        "orden": 5,
+        "series": 3,
+        "repeticiones": null,
+        "tiempoSeg": 25,
+        "pesoReferencia": null
+      }
+    ]
+  },
+  {
+    "nombreRutina": "Push / Pull / Legs",
+    "descripcion": "Rutina de 3 días para nivel intermedio: empuje, tracción y piernas por separado.",
+    "cantidadDias": 3,
+    "ejercicios": [
+      {
+        "ejercicio": "Press de banca con barra",
+        "dia": 1,
+        "orden": 1,
+        "series": 4,
+        "repeticiones": 8,
+        "tiempoSeg": null,
+        "pesoReferencia": 50
+      },
+      {
+        "ejercicio": "Press militar con barra",
+        "dia": 1,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 8,
+        "tiempoSeg": null,
+        "pesoReferencia": 30
+      },
+      {
+        "ejercicio": "Aperturas con mancuernas",
+        "dia": 1,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 10
+      },
+      {
+        "ejercicio": "Elevaciones laterales",
+        "dia": 1,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": 5
+      },
+      {
+        "ejercicio": "Extensión de tríceps en polea",
+        "dia": 1,
+        "orden": 5,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 20
+      },
+      {
+        "ejercicio": "Dominadas",
+        "dia": 2,
+        "orden": 1,
+        "series": 4,
+        "repeticiones": 6,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Remo con barra",
+        "dia": 2,
+        "orden": 2,
+        "series": 4,
+        "repeticiones": 8,
+        "tiempoSeg": null,
+        "pesoReferencia": 40
+      },
+      {
+        "ejercicio": "Pájaros con mancuernas",
+        "dia": 2,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": 5
+      },
+      {
+        "ejercicio": "Curl con barra EZ",
+        "dia": 2,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 10,
+        "tiempoSeg": null,
+        "pesoReferencia": 20
+      },
+      {
+        "ejercicio": "Curl martillo",
+        "dia": 2,
+        "orden": 5,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 8
+      },
+      {
+        "ejercicio": "Sentadilla con barra",
+        "dia": 3,
+        "orden": 1,
+        "series": 4,
+        "repeticiones": 8,
+        "tiempoSeg": null,
+        "pesoReferencia": 60
+      },
+      {
+        "ejercicio": "Peso muerto rumano",
+        "dia": 3,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 10,
+        "tiempoSeg": null,
+        "pesoReferencia": 50
+      },
+      {
+        "ejercicio": "Prensa de piernas",
+        "dia": 3,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 80
+      },
+      {
+        "ejercicio": "Curl femoral en máquina",
+        "dia": 3,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": 30
+      },
+      {
+        "ejercicio": "Elevación de talones de pie",
+        "dia": 3,
+        "orden": 5,
+        "series": 4,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      }
+    ]
+  },
+  {
+    "nombreRutina": "Entrenamiento en casa sin equipo",
+    "descripcion": "Rutina de 3 días solo con el peso corporal. No necesitas nada más que una silla o un banco.",
+    "cantidadDias": 3,
+    "ejercicios": [
+      {
+        "ejercicio": "Sentadilla libre",
+        "dia": 1,
+        "orden": 1,
+        "series": 4,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Flexiones de brazos",
+        "dia": 1,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 10,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Puente de glúteos",
+        "dia": 1,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 15,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Plancha frontal",
+        "dia": 1,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": null,
+        "tiempoSeg": 40,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Zancadas caminando",
+        "dia": 2,
+        "orden": 1,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Fondos en banco",
+        "dia": 2,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Superman",
+        "dia": 2,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": 12,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Bicicleta abdominal",
+        "dia": 2,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 20,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Elevación de talones de pie",
+        "dia": 2,
+        "orden": 5,
+        "series": 3,
+        "repeticiones": 20,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Burpees",
+        "dia": 3,
+        "orden": 1,
+        "series": 3,
+        "repeticiones": 10,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Mountain climbers",
+        "dia": 3,
+        "orden": 2,
+        "series": 3,
+        "repeticiones": null,
+        "tiempoSeg": 30,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Jumping jacks",
+        "dia": 3,
+        "orden": 3,
+        "series": 3,
+        "repeticiones": null,
+        "tiempoSeg": 45,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Sentadilla libre",
+        "dia": 3,
+        "orden": 4,
+        "series": 3,
+        "repeticiones": 20,
+        "tiempoSeg": null,
+        "pesoReferencia": null
+      },
+      {
+        "ejercicio": "Plancha lateral",
+        "dia": 3,
+        "orden": 5,
+        "series": 3,
+        "repeticiones": null,
+        "tiempoSeg": 30,
+        "pesoReferencia": null
+      }
+    ]
+  }
+]

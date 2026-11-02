@@ -15,16 +15,28 @@ public class EjercicioExcelImportService {
     @Autowired
     private EjercicioService ejercicioService;
 
+    // Permite usar encabezados en español; internamente se trabaja con las claves originales
+    private static final Map<String, String> ALIAS_COLUMNAS = Map.of(
+            "Ejercicio", "Exercise",
+            "Demostración en video", "Short YouTube Demonstration",
+            "Nivel de dificultad", "Difficulty Level",
+            "Grupo muscular objetivo", "Target Muscle Group",
+            "Implemento principal", "Primary Equipment",
+            "Región corporal", "Body Region");
+
     public int importarEjercicios(MultipartFile archivo) {
         int importados = 0;
 
         try (InputStream inputStream = archivo.getInputStream();
                 Workbook workbook = WorkbookFactory.create(inputStream)) {
 
-            Sheet hoja = workbook.getSheet("Exercises");
+            Sheet hoja = workbook.getSheet("Ejercicios");
+            if (hoja == null) {
+                hoja = workbook.getSheet("Exercises");
+            }
 
             if (hoja == null) {
-                throw new RuntimeException("No se encontró la hoja 'Exercises' en el Excel.");
+                throw new RuntimeException("No se encontró la hoja 'Ejercicios' (o 'Exercises') en el Excel.");
             }
 
             Row filaEncabezado = hoja.getRow(15); // Fila 16 en Excel
@@ -101,7 +113,8 @@ public class EjercicioExcelImportService {
             String nombreColumna = formatter.formatCellValue(celda);
 
             if (nombreColumna != null && !nombreColumna.isBlank()) {
-                columnas.put(nombreColumna.trim(), celda.getColumnIndex());
+                String clave = ALIAS_COLUMNAS.getOrDefault(nombreColumna.trim(), nombreColumna.trim());
+                columnas.put(clave, celda.getColumnIndex());
             }
         }
 
@@ -207,7 +220,7 @@ public class EjercicioExcelImportService {
             case "climbing rope" -> "Cuerda de escalada";
             case "dumbbell" -> "Mancuerna";
             case "dumbbells" -> "Mancuernas";
-            case "ez bar" -> "Barra EZ";
+            case "ez bar", "barra ez" -> "Barra EZ";
             case "gymnastic rings" -> "Anillas gimnásticas";
             case "heavy sandbag" -> "Saco de arena";
             case "kettlebell" -> "Kettlebell";

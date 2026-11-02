@@ -2,53 +2,54 @@ services:
   db:
     image: mysql:8.0
     container_name: macrofit-mysql-db
-    ports:
-      - "3306:3306"
     environment:
-      - MYSQL_DATABASE=macrofit_db
-      - MYSQL_USER=admin_macrofit
-      - MYSQL_PASSWORD=password123
-      - MYSQL_ROOT_PASSWORD=root_password
+      MYSQL_DATABASE: ${DB_NAME:-macrofit_db}
+      MYSQL_USER: ${DB_USER:-macrofit}
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD en el archivo .env}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Define DB_ROOT_PASSWORD en el archivo .env}
+    ports:
+      - "127.0.0.1:3306:3306" # solo accesible desde tu propia máquina
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
       - macrofit-net
-    restart: always
+    restart: unless-stopped
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_password"]
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD"]
       interval: 10s
       timeout: 5s
       retries: 10
       start_period: 30s
 
-  macrofit-usuarios:
+  api:
     build: .
-    container_name: macrofit-usuarios-api
+    container_name: macrofit-api
     ports:
-      - "80:8080"
+      - "${APP_PORT:-8080}:8080"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://macrofit-mysql-db:3306/macrofit_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-      - SPRING_DATASOURCE_USERNAME=admin_macrofit
-      - SPRING_DATASOURCE_PASSWORD=password123
-      - DB_HOST=macrofit-mysql-db
-      - DB_PORT=3306
-      - DB_NAME=macrofit_db
-      - DB_USER=admin_macrofit
-      - DB_PASSWORD=password123
-      - API_KEY=2cc1d2610130469cb33eed6cc81abd0e
-      - API_URL=https://api.spoonacular.com/recipes/complexSearch
-      - JWT_SECRET=qGMVNiKcFPRpEhbfEpOhXmdCQvLFm01Oc266AKtCIRY=
-      - JWT_EXPIRATION_MS=86400000             
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-macrofit_db}
+      DB_USER: ${DB_USER:-macrofit}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_SSL_MODE: DISABLED
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET en el archivo .env}
+      JWT_EXPIRATION_MS: ${JWT_EXPIRATION_MS:-86400000}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://localhost:3000}
+      SPOONACULAR_API_KEY: ${SPOONACULAR_API_KEY:-}
+      DEMO_ADMIN_EMAIL: ${DEMO_ADMIN_EMAIL:-admin@macrofit.demo}
+      DEMO_ADMIN_PASSWORD: ${DEMO_ADMIN_PASSWORD:-Admin1234}
+      DEMO_USER_EMAIL: ${DEMO_USER_EMAIL:-demo@macrofit.demo}
+      DEMO_USER_PASSWORD: ${DEMO_USER_PASSWORD:-Demo1234}
     depends_on:
       db:
         condition: service_healthy
     networks:
       - macrofit-net
-    restart: always
+    restart: unless-stopped
 
 volumes:
   mysql_data:
-    driver: local
 
 networks:
   macrofit-net:

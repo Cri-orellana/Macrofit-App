@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.proyecto.macrofit.usuarios.repository.UsuarioRepository;
@@ -16,6 +17,9 @@ public class UsuarioService {
 
     @Autowired
     private UsuarioRepository repositorioUsuario;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     // Listar todos los usuarios
     public List<Usuario> obtenerTodosLosUsuarios() {
@@ -43,11 +47,21 @@ public class UsuarioService {
                     "La contraseña debe tener mínimo 8 caracteres, incluyendo solo letras y números.");
         }
 
-        // Encriptamos la contraseña antes de guardarla
-        usuario.setContrasena(encriptarContrasena(usuario.getContrasena()));
+        // El rol NUNCA se toma de la petición: un registro público siempre crea un usuario normal
+        return guardarNuevo(usuario, "USER");
+    }
 
-        if (usuario.getRol() == null)
-            usuario.setRol("USER");
+    // Solo para uso interno (seeders de la demo). Ningún controlador expone este método.
+    public Usuario crearUsuarioConRol(Usuario usuario, String rol) {
+        if (repositorioUsuario.findByCorreo(usuario.getCorreo()).isPresent()) {
+            throw new IllegalArgumentException("El correo ya se encuentra registrado.");
+        }
+        return guardarNuevo(usuario, rol);
+    }
+
+    private Usuario guardarNuevo(Usuario usuario, String rol) {
+        usuario.setContrasena(passwordEncoder.encode(usuario.getContrasena()));
+        usuario.setRol(rol);
 
         UsuarioEntity entidadNueva = convertirAEntidad(usuario);
 
@@ -61,11 +75,9 @@ public class UsuarioService {
     public Usuario loginUsuario(String correo, String contrasena) {
         Optional<UsuarioEntity> usuarioEncontrado = repositorioUsuario.findByCorreo(correo);
 
-        if (usuarioEncontrado.isPresent()) {
-            // Encriptamos la contraseña que intentó ingresar y la comparamos con la
-            // guardada
-            String hashIntento = encriptarContrasena(contrasena);
-            if (usuarioEncontrado.get().getContrasena().equals(hashIntento)) {
+        if (usuarioEncontrado.isPresent() && contrasena != null) {
+            // BCrypt compara la contraseña ingresada contra el hash guardado
+            if (passwordEncoder.matches(contrasena, usuarioEncontrado.get().getContrasena())) {
                 return convertirAUsuario(usuarioEncontrado.get());
             }
         }
@@ -169,7 +181,10 @@ public class UsuarioService {
         return repositorioUsuario.findById(id).map(entidadExistente -> {
             entidadExistente.setNom_usuario(usuarioActualizado.getNom_usuario());
             entidadExistente.setCorreo(usuarioActualizado.getCorreo());
-            entidadExistente.setContrasena(usuarioActualizado.getContrasena());
+            // Solo se cambia la contraseña si viene una nueva (y siempre hasheada)
+            if (usuarioActualizado.getContrasena() != null && !usuarioActualizado.getContrasena().isBlank()) {
+                entidadExistente.setContrasena(passwordEncoder.encode(usuarioActualizado.getContrasena()));
+            }
             entidadExistente.setEdad(usuarioActualizado.getEdad());
             entidadExistente.setPeso(usuarioActualizado.getPeso());
             entidadExistente.setAltura(usuarioActualizado.getAltura());
@@ -202,7 +217,8 @@ public class UsuarioService {
         usuario.setId_usuario(entidad.getId_usuario());
         usuario.setNom_usuario(entidad.getNom_usuario());
         usuario.setCorreo(entidad.getCorreo());
-        usuario.setContrasena(entidad.getContrasena());
+        // El hash nunca se devuelve al cliente
+        usuario.setContrasena(null);
         usuario.setRol(entidad.getRol());
         usuario.setEdad(entidad.getEdad());
         usuario.setAltura(entidad.getAltura());
@@ -233,22 +249,5 @@ public class UsuarioService {
         entidad.setTmb_objetivo(usuario.getTmb_objetivo());
         entidad.setCal_diaria(usuario.getCal_diaria());
         return entidad;
-    }
-
-    private String encriptarContrasena(String password) {
-        try {
-            java.security.MessageDigest md = java.security.MessageDigest.getInstance("SHA-256");
-            byte[] hash = md.digest(password.getBytes(java.nio.charset.StandardCharsets.UTF_8));
-            StringBuilder hexString = new StringBuilder();
-            for (byte b : hash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1)
-                    hexString.append('0');
-                hexString.append(hex);
-            }
-            return hexString.toString();
-        } catch (Exception e) {
-            throw new RuntimeException("Error al encriptar contraseña", e);
-        }
     }
 }

@@ -1,6 +1,7 @@
 package com.proyecto.macrofit.usuarios.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -22,6 +23,10 @@ public class SecurityConfig {
         @Autowired
         private JwtAuthFilter jwtAuthFilter;
 
+        // Orígenes permitidos (separados por coma), configurables por variable de entorno CORS_ALLOWED_ORIGINS
+        @Value("${app.cors.allowed-origins}")
+        private String[] allowedOrigins;
+
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
                 http
@@ -33,6 +38,8 @@ public class SecurityConfig {
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 
                                 .authorizeHttpRequests(auth -> auth
+
+                                                .requestMatchers("/health").permitAll()
 
                                                 .requestMatchers(HttpMethod.POST,
                                                                 "/api/usuarios/login",
@@ -51,6 +58,26 @@ public class SecurityConfig {
                                                 .authenticated()
                                                 .requestMatchers(HttpMethod.PUT, "/api/usuarios/**").hasRole("ADMIN")
 
+                                                // Catálogos compartidos: solo el ADMIN puede crear, editar o borrar.
+                                                // Así un visitante de la demo no puede romper el catálogo.
+                                                .requestMatchers(HttpMethod.POST,
+                                                                "/ejercicios",
+                                                                "/ejercicios/importar-excel",
+                                                                "/rutinas/catalogo",
+                                                                "/api/nutricion/comidas",
+                                                                "/api/nutricion/admin/**")
+                                                .hasRole("ADMIN")
+                                                .requestMatchers(HttpMethod.PUT,
+                                                                "/ejercicios/*",
+                                                                "/api/nutricion/comidas/*",
+                                                                "/api/nutricion/recetas-cache/*")
+                                                .hasRole("ADMIN")
+                                                .requestMatchers(HttpMethod.DELETE,
+                                                                "/ejercicios/*",
+                                                                "/api/nutricion/comidas/*",
+                                                                "/api/nutricion/recetas-cache/*")
+                                                .hasRole("ADMIN")
+
                                                 .anyRequest().authenticated())
 
                                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
@@ -62,10 +89,7 @@ public class SecurityConfig {
         public CorsConfigurationSource corsConfigurationSource() {
                 CorsConfiguration config = new CorsConfiguration();
 
-                config.setAllowedOriginPatterns(List.of(
-                                "http://localhost:5173",
-                                "http://localhost:3000",
-                                "https://macrofit-administracion.vercel.app"));
+                config.setAllowedOriginPatterns(List.of(allowedOrigins));
 
                 config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
                 config.setAllowedHeaders(List.of("*"));

@@ -1,0 +1,304 @@
+[
+  {
+    "dieta": "Omnívora",
+    "nombreComida": "Pollo a la plancha con arroz integral y brócoli",
+    "descripcion": "Pechuga jugosa con arroz integral y brócoli al vapor. Una comida simple, alta en proteína.",
+    "cantidadPorcion": "350 g",
+    "calorias": 520,
+    "proteina": 45,
+    "carbohidratos": 52,
+    "grasa": 12,
+    "ingredientes": [
+      "150 g de pechuga de pollo",
+      "1/2 taza de arroz integral cocido",
+      "1 taza de brócoli",
+      "1 cucharadita de aceite de oliva",
+      "Sal, pimienta y jugo de limón"
+    ],
+    "preparacion": [
+      "Sazonar la pechuga con sal, pimienta y limón.",
+      "Cocinarla en una plancha con el aceite unos 6 minutos por lado.",
+      "Cocer el brócoli al vapor 5 minutos.",
+      "Servir el pollo con el arroz y el brócoli."
+    ]
+  },
+  {
+    "dieta": "Omnívora",
+    "nombreComida": "Salmón al horno con quínoa y espárragos",
+    "descripcion": "Salmón con omega 3, quínoa y espárragos asados.",
+    "cantidadPorcion": "360 g",
+    "calorias": 590,
+    "proteina": 40,
+    "carbohidratos": 38,
+    "grasa": 26,
+    "ingredientes": [
+      "150 g de filete de salmón",
+      "1/2 taza de quínoa cocida",
+      "6 espárragos",
+      "1 cucharadita de aceite de oliva",
+      "Limón, sal y eneldo"
+    ],
+    "preparacion": [
+      "Precalentar el horno a 200 °C.",
+      "Poner el salmón y los espárragos en una bandeja con aceite, sal y limón.",
+      "Hornear 12 a 15 minutos.",
+      "Servir sobre la quínoa y terminar con eneldo."
+    ]
+  },
+  {
+    "dieta": "Omnívora",
+    "nombreComida": "Bowl de carne magra, palta y choclo",
+    "descripcion": "Bowl completo con carne molida magra, palta, choclo y lechuga.",
+    "cantidadPorcion": "400 g",
+    "calorias": 610,
+    "proteina": 42,
+    "carbohidratos": 48,
+    "grasa": 24,
+    "ingredientes": [
+      "120 g de carne molida magra",
+      "1/2 palta",
+      "1/2 taza de choclo desgranado",
+      "1 taza de lechuga",
+      "1 tomate",
+      "Comino, sal y pimienta"
+    ],
+    "preparacion": [
+      "Dorar la carne con comino, sal y pimienta.",
+      "Cortar la palta, el tomate y la lechuga.",
+      "Armar el bowl con la carne, el choclo y las verduras."
+    ]
+  },
+  {
+    "dieta": "Omnívora",
+    "nombreComida": "Tortilla de claras con espinaca y pan integral",
+    "descripcion": "Desayuno ligero y alto en proteína.",
+    "cantidadPorcion": "250 g",
+    "calorias": 340,
+    "proteina": 30,
+    "carbohidratos": 28,
+    "grasa": 10,
+    "ingredientes": [
+      "4 claras de huevo",
+      "1 taza de espinaca fresca",
+      "1 rebanada de pan integral",
+      "1 cucharadita de aceite",
+      "Sal y pimienta"
+    ],
+    "preparacion": [
+      "Saltear la espinaca 1 minuto en el aceite.",
+      "Agregar las claras batidas con sal y pimienta.",
+      "Cocinar a fuego medio hasta que cuaje y doblar.",
+      "Servir con el pan integral tostado."
+    ]
+  },
+  {
+    "dieta": "Vegetariana",
+    "nombreComida": "Revuelto de huevo con espinaca y tomate sobre tostada",
+    "descripcion": "Huevos revueltos cremosos con espinaca y tomate.",
+    "cantidadPorcion": "280 g",
+    "calorias": 380,
+    "proteina": 24,
+    "carbohidratos": 30,
+    "grasa": 18,
+    "ingredientes": [
+      "3 huevos",
+      "1 taza de espinaca",
+      "1 tomate pequeño",
+      "1 rebanada de pan integral",
+      "1 cucharadita de mantequilla"
+    ],
+    "preparacion": [
+      "Derretir la mantequilla y saltear el tomate picado.",
+      "Agregar la espinaca y luego los huevos batidos.",
+      "Revolver suavemente hasta que cuajen.",
+      "Servir sobre la tostada."
+    ]
+  },
+  {
+    "dieta": "Vegetariana",
+    "nombreComida": "Pasta integral con ricota y verduras",
+    "descripcion": "Pasta integral con salsa cremosa de ricota y verduras salteadas.",
+    "cantidadPorcion": "380 g",
+    "calorias": 560,
+    "proteina": 26,
+    "carbohidratos": 72,
+    "grasa": 16,
+    "ingredientes": [
+      "80 g de pasta integral",
+      "1/3 taza de ricota",
+      "1/2 zucchini",
+      "1/2 pimentón",
+      "1 diente de ajo",
+      "Albahaca, sal y pimienta"
+    ],
+    "preparacion": [
+      "Cocer la pasta según el paquete.",
+      "Saltear el ajo, el zucchini y el pimentón.",
+      "Mezclar la pasta con la ricota y las verduras.",
+      "Terminar con albahaca fresca."
+    ]
+  },
+  {
+    "dieta": "Vegetariana",
+    "nombreComida": "Bowl de lentejas, huevo duro y verduras asadas",
+    "descripcion": "Lentejas con verduras al horno y huevo duro.",
+    "cantidadPorcion": "420 g",
+    "calorias": 520,
+    "proteina": 30,
+    "carbohidratos": 62,
+    "grasa": 14,
+    "ingredientes": [
+      "1 taza de lentejas cocidas",
+      "2 huevos duros",
+      "1 zanahoria",
+      "1/2 cebolla morada",
+      "1 cucharadita de aceite de oliva",
+      "Comino y sal"
+    ],
+    "preparacion": [
+      "Cortar la zanahoria y la cebolla y asarlas a 200 °C por 20 minutos.",
+      "Calentar las lentejas con comino y sal.",
+      "Armar el bowl con las lentejas, las verduras y el huevo en mitades."
+    ]
+  },
+  {
+    "dieta": "Vegana",
+    "nombreComida": "Curry de garbanzos con arroz",
+    "descripcion": "Curry cremoso de garbanzos con leche de coco y especias.",
+    "cantidadPorcion": "420 g",
+    "calorias": 540,
+    "proteina": 19,
+    "carbohidratos": 80,
+    "grasa": 13,
+    "ingredientes": [
+      "1 taza de garbanzos cocidos",
+      "1/2 taza de arroz cocido",
+      "1/3 taza de leche de coco light",
+      "1/2 cebolla",
+      "1 tomate",
+      "1 cucharadita de curry en polvo"
+    ],
+    "preparacion": [
+      "Sofreír la cebolla hasta dorar.",
+      "Agregar el tomate picado y el curry.",
+      "Incorporar los garbanzos y la leche de coco y cocinar 10 minutos.",
+      "Servir con el arroz."
+    ]
+  },
+  {
+    "dieta": "Vegana",
+    "nombreComida": "Tofu salteado con verduras y fideos de arroz",
+    "descripcion": "Salteado rápido con tofu firme, verduras y salsa de soya.",
+    "cantidadPorcion": "380 g",
+    "calorias": 450,
+    "proteina": 24,
+    "carbohidratos": 55,
+    "grasa": 14,
+    "ingredientes": [
+      "120 g de tofu firme",
+      "60 g de fideos de arroz",
+      "1 zanahoria",
+      "1/2 pimentón",
+      "1 taza de brócoli",
+      "1 cucharada de salsa de soya"
+    ],
+    "preparacion": [
+      "Remojar los fideos según el paquete.",
+      "Dorar el tofu en cubos en una sartén.",
+      "Agregar las verduras en tiras y saltear 5 minutos.",
+      "Mezclar con los fideos y la salsa de soya."
+    ]
+  },
+  {
+    "dieta": "Vegana",
+    "nombreComida": "Hamburguesa de lentejas con ensalada",
+    "descripcion": "Hamburguesa casera de lentejas al horno con ensalada fresca.",
+    "cantidadPorcion": "340 g",
+    "calorias": 430,
+    "proteina": 22,
+    "carbohidratos": 58,
+    "grasa": 11,
+    "ingredientes": [
+      "1 taza de lentejas cocidas",
+      "1/4 taza de avena",
+      "1/4 cebolla rallada",
+      "1 cucharadita de pimentón ahumado",
+      "Lechuga, tomate y pepino"
+    ],
+    "preparacion": [
+      "Pisar las lentejas y mezclar con la avena, la cebolla y el pimentón.",
+      "Formar 2 hamburguesas.",
+      "Hornear a 200 °C por 20 minutos dándolas vuelta a la mitad.",
+      "Servir con la ensalada."
+    ]
+  },
+  {
+    "dieta": "Keto",
+    "nombreComida": "Pollo con crema y champiñones",
+    "descripcion": "Muslos de pollo en salsa cremosa de champiñones, bajo en carbohidratos.",
+    "cantidadPorcion": "330 g",
+    "calorias": 560,
+    "proteina": 42,
+    "carbohidratos": 8,
+    "grasa": 38,
+    "ingredientes": [
+      "2 muslos de pollo sin hueso",
+      "1 taza de champiñones",
+      "1/4 taza de crema de leche",
+      "1 diente de ajo",
+      "1 cucharadita de mantequilla"
+    ],
+    "preparacion": [
+      "Dorar el pollo en la mantequilla.",
+      "Agregar el ajo y los champiñones laminados.",
+      "Verter la crema y cocinar a fuego bajo 10 minutos.",
+      "Servir caliente."
+    ]
+  },
+  {
+    "dieta": "Keto",
+    "nombreComida": "Ensalada de atún, palta y huevo",
+    "descripcion": "Ensalada fresca y saciante, sin carbohidratos refinados.",
+    "cantidadPorcion": "320 g",
+    "calorias": 520,
+    "proteina": 36,
+    "carbohidratos": 9,
+    "grasa": 38,
+    "ingredientes": [
+      "1 lata de atún al agua",
+      "1/2 palta",
+      "2 huevos duros",
+      "1 taza de lechuga",
+      "1 cucharada de aceite de oliva",
+      "Limón y sal"
+    ],
+    "preparacion": [
+      "Escurrir el atún y desmenuzarlo.",
+      "Cortar la palta y los huevos.",
+      "Mezclar con la lechuga y aliñar con aceite, limón y sal."
+    ]
+  },
+  {
+    "dieta": "Keto",
+    "nombreComida": "Omelette de queso y jamón con espinaca",
+    "descripcion": "Omelette relleno, rápido y bajo en carbohidratos.",
+    "cantidadPorcion": "230 g",
+    "calorias": 480,
+    "proteina": 32,
+    "carbohidratos": 5,
+    "grasa": 36,
+    "ingredientes": [
+      "3 huevos",
+      "30 g de queso mantecoso",
+      "2 láminas de jamón",
+      "1/2 taza de espinaca",
+      "1 cucharadita de mantequilla"
+    ],
+    "preparacion": [
+      "Batir los huevos con una pizca de sal.",
+      "Cocinarlos en la mantequilla a fuego medio.",
+      "Rellenar con queso, jamón y espinaca.",
+      "Doblar y servir."
+    ]
+  }
+]
