@@ -1,11 +1,21 @@
 package com.proyecto.macrofit.usuarios.security;
 
+import com.proyecto.macrofit.usuarios.model.Usuario;
+import com.proyecto.macrofit.usuarios.model.Entity.UsuarioEntity;
+import com.proyecto.macrofit.usuarios.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -20,6 +30,9 @@ public class SecurityConfig {
         @Value("${app.cors.allowed-origins:*}")
         private String[] allowedOrigins;
 
+        @Autowired
+        private UsuarioRepository usuarioRepository;
+
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
                 http
@@ -28,10 +41,34 @@ public class SecurityConfig {
                                 .sessionManagement(session -> session
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                                 .authorizeHttpRequests(auth -> auth
-                                                .anyRequest().permitAll() //
-                                );
+                                                .anyRequest().permitAll());
 
                 return http.build();
+        }
+
+        @Bean
+        public UserDetailsService userDetailsService() {
+                return correo -> {
+                        UsuarioEntity usuario = usuarioRepository.findByCorreo(correo)
+                                        .orElseThrow(() -> new UsernameNotFoundException(
+                                                        "Usuario no encontrado: " + correo));
+
+                        return org.springframework.security.core.userdetails.User
+                                        .withUsername(usuario.getCorreo())
+                                        .password(usuario.getContrasena())
+                                        .roles("USER")
+                                        .build();
+                };
+        }
+
+        @Bean
+        public PasswordEncoder passwordEncoder() {
+                return new BCryptPasswordEncoder();
+        }
+
+        @Bean
+        public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+                return authConfig.getAuthenticationManager();
         }
 
         @Bean
